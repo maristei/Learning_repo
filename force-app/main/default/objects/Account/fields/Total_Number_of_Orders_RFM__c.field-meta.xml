@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Number_of_Orders_RFM__c</fullName>
+    <description>This field is a sum of Total Number of Submitted Orders, Total Number of Cancelled Orders and Total Number of Manual Orders</description>
+    <externalId>false</externalId>
+    <formula>Total_Number_of_Cancelled_Orders_RFM__c + Total_Number_of_Manual_Orders_RFM__c + Total_Number_of_Submitted_Orders_RFM__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field is a sum of Total Number of Submitted Orders, Total Number of Cancelled Orders and Total Number of Manual Orders</inlineHelpText>
+    <label>Total Number of Orders</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

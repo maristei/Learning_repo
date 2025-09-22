@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AppliedDiscountCodesCounter__c</fullName>
+    <description>Counts the number of applied related discount codes.</description>
+    <label>Number of Applied Discount Codes</label>
+    <summaryFilterItems>
+        <field>DiscountCode_RFM__c.Status_RFM__c</field>
+        <operation>equals</operation>
+        <value>Applied</value>
+    </summaryFilterItems>
+    <summaryForeignKey>DiscountCode_RFM__c.Account_RFM__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

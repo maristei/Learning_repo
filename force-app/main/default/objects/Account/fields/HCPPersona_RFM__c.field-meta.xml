@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HCPPersona_RFM__c</fullName>
+    <label>HCP Persona</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Partner Businessman</fullName>
+                <default>false</default>
+                <label>Partner Businessman</label>
+            </value>
+            <value>
+                <fullName>Scientist Businessman</fullName>
+                <default>false</default>
+                <label>Scientist Businessman</label>
+            </value>
+            <value>
+                <fullName>Partner Pioneer</fullName>
+                <default>false</default>
+                <label>Partner Pioneer</label>
+            </value>
+            <value>
+                <fullName>Scientist Pioneer</fullName>
+                <default>false</default>
+                <label>Scientist Pioneer</label>
+            </value>
+            <value>
+                <fullName>Partner Struggler</fullName>
+                <default>false</default>
+                <label>Partner Struggler</label>
+            </value>
+            <value>
+                <fullName>Businessman Struggler</fullName>
+                <default>false</default>
+                <label>Businessman Struggler</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

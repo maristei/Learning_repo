@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_Status_RFM__c</fullName>
+    <label>GDPR Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To be removed</fullName>
+                <default>false</default>
+                <label>To be removed</label>
+            </value>
+            <value>
+                <fullName>Removed</fullName>
+                <default>false</default>
+                <label>Removed</label>
+            </value>
+            <value>
+                <fullName>Forgotten</fullName>
+                <default>false</default>
+                <label>Forgotten</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

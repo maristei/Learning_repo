@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActiveDiscountCodesCounter__c</fullName>
+    <description>Counts the number of active related discount codes.</description>
+    <label>Number of Active Discount Codes</label>
+    <summaryFilterItems>
+        <field>DiscountCode_RFM__c.Status_RFM__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>DiscountCode_RFM__c.Account_RFM__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

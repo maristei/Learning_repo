@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotifyAboutOnlinePayments_RFM__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Send notification email when Online Payment is made.</description>
+    <inlineHelpText>Set this flag to send notification to this Distributor/Lab Partner when order is submitted. Notification email will include TRF form as attachment. Email won&apos;t be send if &quot;Lab Partner collects payment&quot; field is set.</inlineHelpText>
+    <label>Notify when order is submitted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PreScreening__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>By enabling this option, you give HCPs and HCP Delegated Users, who have affiliation with this HCO, a consent to send samples to the Cambridge laboratory to conduct pre-screening tests before classifying a patient to a clinical study.</inlineHelpText>
+    <label>Pre-screening</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

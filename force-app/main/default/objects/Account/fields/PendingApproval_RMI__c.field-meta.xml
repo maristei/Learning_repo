@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PendingApproval_RMI__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Defines if account is pending approval in data source system</description>
+    <label>Pending Approval</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

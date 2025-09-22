@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountSubtype_RMI__c</fullName>
+    <description>Account Subtype from CRM4U</description>
+    <label>Account Subtype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Business Account</fullName>
+                <default>false</default>
+                <label>Business Account</label>
+            </value>
+            <value>
+                <fullName>Buying Group Organization</fullName>
+                <default>false</default>
+                <label>Buying Group Organization</label>
+            </value>
+            <value>
+                <fullName>Cancer Network Organization</fullName>
+                <default>false</default>
+                <label>Cancer Network Organization</label>
+            </value>
+            <value>
+                <fullName>Hospital Department</fullName>
+                <default>false</default>
+                <label>Hospital Department</label>
+            </value>
+            <value>
+                <fullName>Other Network Organization</fullName>
+                <default>false</default>
+                <label>Other Network Organization</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Potential</fullName>
+                <default>false</default>
+                <label>Potential</label>
+            </value>
+            <value>
+                <fullName>Practice</fullName>
+                <default>false</default>
+                <label>Practice</label>
+            </value>
+            <value>
+                <fullName>Virtual Account</fullName>
+                <default>false</default>
+                <label>Virtual Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

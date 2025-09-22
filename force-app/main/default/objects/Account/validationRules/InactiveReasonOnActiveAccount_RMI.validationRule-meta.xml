@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InactiveReasonOnActiveAccount_RMI</fullName>
+    <active>true</active>
+    <description>Inactive Reason can&apos;t be set for Active Account</description>
+    <errorConditionFormula>ISPICKVAL( Active_RMI__c , &apos;Yes&apos;) &amp;&amp; NOT( ISBLANK(  Inactive_Reason_RMI__c ) ) &amp;&amp; RecordType.Name = &apos;Customer User&apos; &amp;&amp; TEXT(ManualCountry_RFM__c) = &apos;IL&apos;</errorConditionFormula>
+    <errorMessage>Inactive Reason can&apos;t be set for Active Account</errorMessage>
+</ValidationRule>

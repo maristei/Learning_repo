@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PersonAccountNameUpdateCheck_RMI</fullName>
+    <active>true</active>
+    <description>Validation rule to check that person account name is not updated
+            -TKT-000351 : amended rule to allow pnet (Partner Connection User) and cimpo (CDW Import) for SF2SF sync from CRM4U</description>
+    <errorConditionFormula>AND (
+            $User.Alias != &apos;pnet&apos;,
+            $User.Alias != &apos;paas&apos;,
+            $Profile.Name != &apos;CDW Data Import&apos;,
+			$Profile.Name != &apos;Reltio Integration&apos;,
+            ( ISCHANGED(FirstName)  ||  ISCHANGED( LastName )  ||  ISCHANGED( Salutation )  ||  ISCHANGED( MiddleName ) ||  ISCHANGED( Suffix ) ),  RecordType.DeveloperName = &apos;HCP_RMI&apos;
+            )</errorConditionFormula>
+    <errorMessage>Please forward change requests to RFM Systems Admin.</errorMessage>
+</ValidationRule>

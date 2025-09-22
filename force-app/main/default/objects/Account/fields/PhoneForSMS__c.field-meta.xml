@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PhoneForSMS__c</fullName>
+    <description>Phone for SMS used for providing SMS and other system related services. Example document download. Must be in strict format.</description>
+    <label>Phone for SMS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

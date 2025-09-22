@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accept_DP_PD_Transfer_RFMC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use this field to determine if HCO Delegated User, HCP, or customer user has accepted Term &amp; Condition before registration</description>
+    <label>Accept DP/ PD Transfer</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

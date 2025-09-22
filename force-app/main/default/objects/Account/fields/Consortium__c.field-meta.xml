@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consortium__c</fullName>
+    <description>Consortium associated with HCO</description>
+    <label>Consortium</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ManualCountry_RFM__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Consortium</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>NI</controllingFieldValue>
+            <controllingFieldValue>LC</controllingFieldValue>
+            <controllingFieldValue>PA</controllingFieldValue>
+            <controllingFieldValue>AW</controllingFieldValue>
+            <controllingFieldValue>BB</controllingFieldValue>
+            <controllingFieldValue>AG</controllingFieldValue>
+            <controllingFieldValue>BM</controllingFieldValue>
+            <controllingFieldValue>BS</controllingFieldValue>
+            <controllingFieldValue>CR</controllingFieldValue>
+            <controllingFieldValue>CU</controllingFieldValue>
+            <controllingFieldValue>SR</controllingFieldValue>
+            <controllingFieldValue>SV</controllingFieldValue>
+            <controllingFieldValue>SX</controllingFieldValue>
+            <controllingFieldValue>CW</controllingFieldValue>
+            <controllingFieldValue>DO</controllingFieldValue>
+            <controllingFieldValue>TT</controllingFieldValue>
+            <controllingFieldValue>GD</controllingFieldValue>
+            <controllingFieldValue>VE</controllingFieldValue>
+            <controllingFieldValue>GT</controllingFieldValue>
+            <controllingFieldValue>GY</controllingFieldValue>
+            <controllingFieldValue>HN</controllingFieldValue>
+            <controllingFieldValue>HT</controllingFieldValue>
+            <controllingFieldValue>JM</controllingFieldValue>
+            <controllingFieldValue>KY</controllingFieldValue>
+            <valueName>CAC Consortium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PE</controllingFieldValue>
+            <valueName>PE Consortium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BR</controllingFieldValue>
+            <valueName>BR Consortium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CL</controllingFieldValue>
+            <valueName>CL Consortium</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

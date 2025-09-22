@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HCPLaboratoryStakeholder_RFM__c</fullName>
+    <label>HCP Laboratory Stakeholder</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>The Scientist &quot;KOL&quot;</fullName>
+                <default>false</default>
+                <label>The Scientist &quot;KOL&quot;</label>
+            </value>
+            <value>
+                <fullName>The Businessman</fullName>
+                <default>false</default>
+                <label>The Businessman</label>
+            </value>
+            <value>
+                <fullName>The Clinicians</fullName>
+                <default>false</default>
+                <label>The Clinicians</label>
+            </value>
+            <value>
+                <fullName>The Dispensers</fullName>
+                <default>false</default>
+                <label>The Dispensers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

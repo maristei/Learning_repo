@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoFutureBirthdateForPatient</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.Name = &apos;Customer User&apos;  &amp;&amp; ( PersonBirthdate &gt; TODAY() ) &amp;&amp; TEXT(ManualCountry_RFM__c) = &apos;IL&apos;</errorConditionFormula>
+    <errorMessage>Birthdate can&apos;t be set to the future</errorMessage>
+</ValidationRule>

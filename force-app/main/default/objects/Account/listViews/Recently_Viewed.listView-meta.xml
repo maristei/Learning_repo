@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recently_Viewed</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Country_Reference_RFMC__c</columns>
+    <columns>AccountType_RMI__c</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Approved__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Recently Viewed</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderListXLSAccess__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag for allowing Account to download the report from the Ordering Portal 2.0</description>
+    <inlineHelpText>Flag for allowing Account to download the report from the Ordering Portal 2.0</inlineHelpText>
+    <label>Order list - XLS access</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AreaOfInterest_RFM__c</fullName>
+    <label>Area of Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Oncology</fullName>
+                <default>false</default>
+                <label>All Oncology</label>
+            </value>
+            <value>
+                <fullName>Lung Oncology</fullName>
+                <default>false</default>
+                <label>Lung Oncology</label>
+            </value>
+            <value>
+                <fullName>Breast Oncology</fullName>
+                <default>false</default>
+                <label>Breast Oncology</label>
+            </value>
+            <value>
+                <fullName>CRC</fullName>
+                <default>false</default>
+                <label>CRC</label>
+            </value>
+            <value>
+                <fullName>Rare</fullName>
+                <default>false</default>
+                <label>Rare</label>
+            </value>
+            <value>
+                <fullName>Pediatric</fullName>
+                <default>false</default>
+                <label>Pediatric</label>
+            </value>
+            <value>
+                <fullName>Gynae</fullName>
+                <default>false</default>
+                <label>Gynae</label>
+            </value>
+            <value>
+                <fullName>GU</fullName>
+                <default>false</default>
+                <label>GU</label>
+            </value>
+            <value>
+                <fullName>Hematology</fullName>
+                <default>false</default>
+                <label>Hematology</label>
+            </value>
+            <value>
+                <fullName>Sarcoma</fullName>
+                <default>false</default>
+                <label>Sarcoma</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

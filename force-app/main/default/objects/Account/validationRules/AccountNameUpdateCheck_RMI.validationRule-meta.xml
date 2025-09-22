@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountNameUpdateCheck_RMI</fullName>
+    <active>true</active>
+    <description>Check if the Account Name has been updated before saving. Account Name is mastered and should not be updated.
+            -TKT-000351 : amended rule to allow pnet (Partner Connection User) for SF2SF sync from CRM4U</description>
+    <errorConditionFormula>ISCHANGED( Name )  &amp;&amp; $User.Alias != &apos;pnet&apos; &amp;&amp; $Profile.Name != &apos;Reltio Integration&apos; &amp;&amp; $Profile.Name != &apos;CDW Data Import&apos; &amp;&amp; RecordType.DeveloperName = &apos;HCO_RFMC&apos;</errorConditionFormula>
+    <errorMessage>Please forward change requests to RFM Systems Admin.</errorMessage>
+</ValidationRule>

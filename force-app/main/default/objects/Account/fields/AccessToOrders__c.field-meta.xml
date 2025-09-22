@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccessToOrders__c</fullName>
+    <description>Flag to enable/disable a particular HCO delegated user account if they can view orders</description>
+    <inlineHelpText>Flag to enable/disable a particular HCO delegated user account if they can view orders</inlineHelpText>
+    <label>Access to Orders</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Ordering_Flows</valueSetName>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

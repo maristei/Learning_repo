@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM4U_Acting_Type__c</fullName>
+    <label>Acting Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Private</fullName>
+                <default>false</default>
+                <label>Private</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>Public(MX)</fullName>
+                <default>false</default>
+                <label>Public(MX)</label>
+            </value>
+            <value>
+                <fullName>Public(BR)</fullName>
+                <default>false</default>
+                <label>Public(BR)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckRecordTypeOfHCODelegated</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+            NOT(ISBLANK(HCODelegatedUser__c)),
+            HCODelegatedUser__r.RecordType.Name &lt;&gt; &quot;HCO Delegated User&quot;
+            )</errorConditionFormula>
+    <errorDisplayField>HCODelegatedUser__c</errorDisplayField>
+    <errorMessage>This account must be HCO Delegated User.</errorMessage>
+</ValidationRule>
