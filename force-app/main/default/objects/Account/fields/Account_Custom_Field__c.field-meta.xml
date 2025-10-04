@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Account_Custom_Field__c</fullName>
-    <description>This is test field. Rebase. push</description>
+    <description>This is test field. Rebase. push. valid</description>
     <externalId>false</externalId>
     <label>Account Custom Field</label>
     <length>80</length>
