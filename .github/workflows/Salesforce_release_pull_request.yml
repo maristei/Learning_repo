@@ -1,0 +1,42 @@
+name: SFDX deployment to REL - pull request
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ release ]
+    paths:
+    - 'force-app/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Node.js
+      run: | 
+          sudo apt-get update
+          sudo apt-get install -y ca-certificates curl gnupg
+          sudo mkdir -p /etc/apt/keyrings
+          curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+          NODE_MAJOR=18
+          echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+          sudo apt-get update
+          sudo apt-get install nodejs -y
+    - name: Install Salesforce CLI
+      run: |
+          npm --version
+          sudo chown -R $(whoami) /usr
+          npm install @salesforce/cli --global
+    - name: Only for sandboxes... Replace/remove built-in values and files
+      run: bash assets/scripts/cleanup_rel_sandbox.sh
+    - name: Replacement and cleanup before deployment
+      run: bash assets/scripts/cleanup_all.sh
+    - name: Decrypt Server Key
+      run: openssl enc -aes-256-cbc -md sha256 -salt -d -in assets/release_server.key.enc -out assets/server.key -k ${{ secrets.ENCRYPTION_PASS }} -pbkdf2
+    - name: Authenticate Target Org
+      run: |
+          sf --version
+          sf plugins --core
+          sf org login jwt --instance-url ${{ secrets.SF_SERVERURL_TEST}} --client-id ${{ secrets.CONSUMER_KEY_REL }} --jwt-key-file assets/server.key --username ${{ secrets.SF_USERNAME_REL }}
+    - name: Deploy to Target Org
+      run: sf project deploy start --source-dir force-app --target-org ${{ secrets.SF_USERNAME_REL }} --test-level=NoTestRun --dry-run --wait 200
