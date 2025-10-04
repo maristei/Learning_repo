@@ -27,10 +27,10 @@ jobs:
           npm --version
           sudo chown -R $(whoami) /usr
           npm install @salesforce/cli --global
-    - name: Only for sandboxes... Replace/remove built-in values and files
-      run: bash assets/scripts/cleanup_rel_sandbox.sh
-    - name: Replacement and cleanup before deployment
-      run: bash assets/scripts/cleanup_all.sh
+    # - name: Only for sandboxes... Replace/remove built-in values and files
+    #  run: bash assets/scripts/cleanup_rel_sandbox.sh
+    # - name: Replacement and cleanup before deployment
+    #  run: bash assets/scripts/cleanup_all.sh
     - name: Decrypt Server Key
       run: openssl enc -aes-256-cbc -md sha256 -salt -d -in assets/release_server.key.enc -out assets/server.key -k ${{ secrets.ENCRYPTION_PASS }} -pbkdf2
     - name: Authenticate Target Org
