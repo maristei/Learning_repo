@@ -31,6 +31,10 @@ jobs:
     #  run: bash assets/scripts/cleanup_rel_sandbox.sh
     # - name: Replacement and cleanup before deployment
     #  run: bash assets/scripts/cleanup_all.sh
+    - name: Install Plugins
+      run: |
+          echo y | sf plugins install sfdx-git-delta  
+          sf plugins
     - name: Decrypt Server Key
       run: openssl enc -aes-256-cbc -md sha256 -salt -d -in assets/release_server.key.enc -out assets/server.key -k ${{ secrets.ENCRYPTION_PASS }} -pbkdf2
     - name: Authenticate Target Org
@@ -38,5 +42,9 @@ jobs:
           sf --version
           sf plugins --core
           sf org login jwt --instance-url ${{ secrets.SF_SERVERURL_TEST}} --client-id ${{ secrets.CONSUMER_KEY_REL }} --jwt-key-file assets/server.key --username ${{ secrets.SF_USERNAME_REL }}
-    - name: Deploy to Target Org
-      run: sf project deploy start --source-dir force-app --target-org ${{ secrets.SF_USERNAME_REL }} --test-level=NoTestRun --dry-run --wait 200
+    # - name: Deploy to Target Org
+      # run: sf project deploy start --source-dir force-app --target-org ${{ secrets.SF_USERNAME_REL }} --test-level=NoTestRun --dry-run --wait 200
+    - name: Calculate Delta and run check-only deployment
+      run: |
+          sf sgd source delta --from "HEAD~1" --output-dir "."
+          sf project deploy start --manifest package/package.xml --post-destructive-changes destructiveChanges/destructiveChanges.xml --test-level=NoTestRun --dry-run --wait 200
