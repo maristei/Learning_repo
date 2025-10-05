@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Install Node.js
       run: | 
           sudo apt-get update
@@ -41,10 +43,11 @@ jobs:
       run: |
           sf --version
           sf plugins --core
-          sf org login jwt --instance-url ${{ secrets.SF_SERVERURL_TEST}} --client-id ${{ secrets.CONSUMER_KEY_REL }} --jwt-key-file assets/server.key --username ${{ secrets.SF_USERNAME_REL }}
+          sf org login jwt --instance-url ${{ secrets.SF_SERVERURL_TEST}} --client-id ${{ secrets.CONSUMER_KEY_REL }} --jwt-key-file assets/server.key --username ${{ secrets.SF_USERNAME_REL }} --set-default --alias DevMaris
     # - name: Deploy to Target Org
       # run: sf project deploy start --source-dir force-app --target-org ${{ secrets.SF_USERNAME_REL }} --test-level=NoTestRun --dry-run --wait 200
     - name: Calculate Delta and run check-only deployment
       run: |
-          sf sgd source delta --from "HEAD~1" --output-dir "."
-          sf project deploy start --manifest package/package.xml --post-destructive-changes destructiveChanges/destructiveChanges.xml --test-level=NoTestRun --dry-run --wait 200
+          BASE_SHA=$(git merge-base origin/${{ github.base_ref }} HEAD)
+          sf sgd source delta --from "$BASE_SHA" --to "HEAD" --output-dir .
+          sf project deploy start --target-org DevMaris --manifest package/package.xml --post-destructive-changes destructiveChanges/destructiveChanges.xml --test-level=NoTestRun --dry-run --wait 200
