@@ -46,5 +46,5 @@ jobs:
       # run: sf project deploy start --source-dir force-app --target-org ${{ secrets.SF_USERNAME_REL }} --test-level=NoTestRun --dry-run --wait 200
     - name: Calculate Delta and run check-only deployment
       run: |
-          sf sgd source delta --to "HEAD" --from "HEAD^" --output-dir "."
+          sf sgd source delta --from "HEAD^1" --output-dir "."
           sf project deploy start --manifest package/package.xml --post-destructive-changes destructiveChanges/destructiveChanges.xml --test-level=NoTestRun --dry-run --wait 200
